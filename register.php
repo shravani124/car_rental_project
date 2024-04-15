@@ -167,7 +167,7 @@ input#cpsw{
             <label>Email : </label>
             <br>
             <input type="email" name="email"
-            id="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="ex: example@ex.com"placeholder="Enter Valid Email" required>
+            id="name"  title="ex: example@ex.com"placeholder="Enter Valid Email" required>
             <br><br>
             
             <label>Your License number : </label>
@@ -212,7 +212,7 @@ input#cpsw{
         
         
         </input>
-            
+
         </form>
         </div> 
     </div>
