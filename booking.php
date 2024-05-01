@@ -357,42 +357,23 @@ ul li a:hover{
     </div>
     
     <script>
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-             dd = '0' + dd
-        }
-        if (mm < 10) {
-              mm = '0' + mm
-        }
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
 
-        today = yyyy + '-' + mm + '-' + dd;
-        document.getElementById("datefield").setAttribute("min", today);
-        document.getElementById("datefield").setAttribute("max", today);
+    // Add a future date, e.g., one month from today
+    var futureDate = new Date();
+    futureDate.setMonth(futureDate.getMonth() + 1); // Set to one month ahead
 
+    // Format the dates as YYYY-MM-DD strings
+    var todayString = yyyy + '-' + mm + '-' + dd;
+    var futureDateString = futureDate.getFullYear() + '-' + (futureDate.getMonth() + 1) + '-' + futureDate.getDate();
 
-    </script>
-    <script>
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-             dd = '0' + dd
-        }
-        if (mm < 10) {
-              mm = '0' + mm
-        }
-
-        today = yyyy + '-' + mm + '-' + dd;
-        document.getElementById("dfield").setAttribute("min", today);
-        
-
-
-    </script>
-    
+    // Set the minimum and maximum attributes for the date input field
+    document.getElementById("datefield").setAttribute("min", todayString);
+    document.getElementById("datefield").setAttribute("max", futureDateString);
+</script>
     
     
     
